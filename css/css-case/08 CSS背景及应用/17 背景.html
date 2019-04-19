@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 500px;
+            background-color: pink;
+            background-image: url(image/l.jpg);
+            background-repeat: no-repeat; /*平铺方式*/
+            /*1、利用方位名词 top bottom来更改背景的图片位置*/
+            /*background-position: left top;*//*默认的是左上角*/
+            /*background-position: bottom right; *//*方位名词没有顺序，谁在前都可以*/
+            /*background-position: center center;*/
+            /*background-position: left;*//*如果方位名词只写一个，另外一个默认为center*/
+            /*2、精确单位，第一个值一定是x坐标，第二个值一定是Y坐标*/
+            /*background-position: 10px 10px;*/
+            /*3、混搭*/
+            /*center 10px 水平居中 垂直是10px*/
+            /*10px center 垂直是10px 水平居中*/
+            background-position: center 10px;
+        }
+    </style>
+</head>
+    <body>
+        <div></div>
+    </body>
+</html>
