@@ -8,19 +8,30 @@
             width: 300px;
             height: 100px;
             border: 1px solid pink;
-            text-align: center;/*文字水平居中*/
-            margin: 10px auto;/*盒子水平居中  左右margin 设置为auto就可以了*/
+            text-align: center; /*文字水平居中*/
+            margin: 10px auto; /*盒子水平居中  左右margin 设置为auto就可以了*/
         }
+
         section {
             width: 400px;
             height: 400px;
-            border: 1px solid  #000;
+            border: 1px solid #000;
         }
+
         section img {
             width: 200px;
             height: 210px;
             margin-top: 30px;
             margin-left: 50px;
+        }
+
+        aside {
+            width: 400px;
+            height: 400px;
+            border: 1px solid purple;
+            background: #fff url("images/sun.jpg") no-repeat;
+            background-size: 200px 210px; /*背景图片更改大小只能用 background-size*/
+            background-position: 30px 50px; /*背景图片更改位置只能用 background-position*/
         }
     </style>
 </head>
@@ -29,11 +40,13 @@
         <div>文字水平居中</div>
         2、插入图片和背景图片
         <section>
-            <img src="images/sun.jpg" alt="">
+            <img src="images/sun.jpg" height="691" width="721" alt="">123
         </section>
-    <aside>
+        <aside>
+            123123123
+        </aside>
+
         3. 一般情况下，背景图片适合做一些小图标使用
         产品展示之类的就用插入图片
-    </aside>
     </body>
 </html>
