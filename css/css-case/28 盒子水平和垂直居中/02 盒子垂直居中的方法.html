@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            1、先让盒子的上线边缘和父盒子的水平中心线重叠，然后再让子盒子往回移动自身的一半距离
+            2、使用表格的vertical-align:middle实现盒子垂直居中 display:table-cell
+            3、使用margin计算盒子的上下边距，是盒子居中
+        */
+        /*1、先让盒子的上线边缘和父盒子的水平中心线重叠，然后再让子盒子往回移动自身的一半距离*/
+        /*.t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            position: absolute;
+            margin-top: 150px;
+            top: -101px;
+        }*/
+        /* 2、使用表格的vertical-align:middle实现盒子垂直居中 display:table-cell*/
+       /*.t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+        }*/
+        /*3、使用margin计算盒子的上下边距，是盒子居中*/
+        .t1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .t2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin-top: 49px;
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">
+        <div class="t2"></div>
+    </div>
+</body>
+</html>

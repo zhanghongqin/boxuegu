@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            1、使用margin:0 auto
+            2、使用margin左右边距
+            3、先让盒子左右边缘和父盒子垂直的中心线重叠，然后把盒子往回移动自身宽度的一般
+            4、把盒子转换成行内块，然后使用text-align属性使盒子水平居中
+        */
+        /*1、使用margin:0 auto*/
+        /*.m1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin: 0 auto;!*处于浏览器中心位置*!
+        }
+        .m2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }*/
+        /*2、使用margin左右边距（只针对有固定宽度）*/
+        /*.m1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        .m2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            margin-left: 48px;
+            margin-right: 48px;
+        }*/
+        /* 3、先让盒子左右边缘和父盒子垂直的中心线重叠，然后把盒子往回移动自身宽度的一般*/
+        /*.m1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+        }
+        .m2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            position: absolute;
+            left: 150px;
+            margin-left: -101px;
+        }*/
+        /* 4、把盒子转换成行内块，然后使用text-align属性使盒子水平居中*/
+        .m1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            text-align: center;
+        }
+        .m2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="m1">
+        <div class="m2"></div>
+    </div>
+</body>
+</html>
