@@ -99,7 +99,7 @@
 				float: right;
 				height: 42px;
 				line-height: 42px;  /* 这个行高给父亲， 行高会继承 */
-				margin: 0 15px 0 35px;  /* 上0 右 15  下0 左  35 */
+				margin: 0 15px 0 35px;  /* 上0 右 15 CSS四种定位及应用  下0 左  35 */
 			}
 			.personal img {
 				margin: 0 8px;
