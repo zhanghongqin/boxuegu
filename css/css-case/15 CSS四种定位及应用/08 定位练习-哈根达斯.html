@@ -1,10 +1,34 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            div {
+                width: 310px;
+                height: 190px;
+                border: 1px solid #ccc;
+                margin: 50px auto;
+                padding: 10px;
+                position: relative;/*子绝父相最合适*/
+            }
+            .topIcon {
+                position: absolute;/*绝对位置*/
+                top: 0;
+                left: 0;
+            }
+            .bottomIcon {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="images/top_tu.gif" alt="" class="topIcon">
+            <img src="images/adv.jpg" alt="">
+            <img src="images/br.gif" alt="" class="bottomIcon">
+        </div>
+    </body>
 </html>

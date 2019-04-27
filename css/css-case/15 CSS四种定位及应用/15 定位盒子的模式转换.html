@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            height: 100px;
+            background-color: pink;
+           /* float: left;*//*没给盒子的宽度 浮动的盒子有模式转换的情况 转化为行内块*/
+            /*position: fixed;*//*元素添加了绝对定位和固定定位之后，元素模式也会发生转换，都转换为行内块模式*/
+        }
+        span {
+            background-color: purple;
+            /*display: block;*/
+            width: 100px;
+            height: 100px;
+           /* float: left;*//*如果盒子本身就需要添加浮动或绝对/固定定位就不需要转换了*/
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
-
+    <div>稳住，定位不难，我们能赢</div>
+    <span>我是行内元素</span>
 </body>
 </html>
