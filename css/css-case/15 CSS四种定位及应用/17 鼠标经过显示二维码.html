@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        div img {
+            position: absolute;
+            left: 110px;
+            top: 0;
+            display: none;/*隐藏二维码*/
+        }
+        div:hover img{/*鼠标经过div的时候，img图片显示出来*/
+            display: block;/*显示元素*/
+        }
+    </style>
 </head>
 <body>
-
+    <div>
+        扫二维码
+        <img src="images/erweima.png" alt="">
+    </div>
 </body>
 </html>
