@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .top {
+            /*通栏的盒子，可以不用写宽度，默认的宽度和浏览器一样宽*/
+            height: 80px;
+            border: 1px dashed #aaa;
+            background-color: #eee;
+            text-align: center;
+        }
+        .banner {
+            width: 960px;
+            border: 1px dashed #aaa;
+            background-color: #eee;
+            height: 150px;
+            margin: 10px auto;
+        }
+        .small {
+            width: 960px;
+            height: 100px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .small ul li {
+            width: 230px;
+            border: 1px dashed #aaa;
+            background-color: #eee;
+            height: 100px;
+            float: left;
+            margin-left: 10px
+        }
+        .small .nomargin {
+            margin-left: 0;
+        }
+        .footer {
+            height: 150px;
+            border: 1px dashed #aaa;
+            background-color: #eee;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">通栏的顶部</div>
+    <div class="banner">广告条</div>
+    <div class="small">
+        <ul>
+            <li class="nomargin">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div class="small">
+        <ul>
+            <li class="nomargin">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div class="small">
+        <ul>
+            <li class="nomargin">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+<div class="footer"></div>
+</body>
+</html>

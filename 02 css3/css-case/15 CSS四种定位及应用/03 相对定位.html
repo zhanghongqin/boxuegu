@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        div:nth-child(2) {
+            background-color: purple;
+            position: relative;
+            left: 100px;
+            top: 110px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div>2</div>
+    <div></div>
+    <p>1. 相对定位最重要的一点是，它可以通过边偏移移动位置，但是原来的所占的位置，继续占有。</br>
+        2. 其次，每次移动的位置，是以自己的左上角为基点移动（相对于自己来移动位置）</br>
+        就是说，相对定位的盒子仍在标准流中，它后面的盒子仍以标准流方式对待它。（相对定位不脱标）</br>
+        如果说浮动的主要目的是 让多个块级元素一行显示，那么定位的主要价值就是 移动位置， 让盒子到我们想要的位置上去
+    </p></br>
+</body>
+</html>

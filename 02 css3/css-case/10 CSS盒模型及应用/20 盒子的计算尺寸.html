@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 5px solid red;/*宽度 到这里的时候为110， border-left + border-right=5+5 100+5+5=110 */
+            padding: 10px; /*宽度 到这里的时候为130， padding-left + padding-right=10+10 100+5+5+10+10=130 */
+            margin: 20px;/*宽度 到这里的时候为130， margin-left + margin-right=10+10 100+5+5+10+10+20+20=170 */
+            /* 空间尺寸:  width + border + padding + margin = 170 */
+            /* 内合 实际尺寸:  width + border + padding = 130   */
+        }
+    </style>
+</head>
+    <body>
+        <div></div>
+    </body>
+</html>
