@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            width: 120px;
+            height: 20px;
+            border: 1px solid #f00;
+            white-space: nowrap;/*首先强制在同一行内显示所有文本*/
+            overflow: hidden;/*必须有这句话*/
+            text-overflow: clip;/*直接裁剪*/
+            /*text-overflow: ellipsis;*//*超出的部分，省略号代替*/
+        }
+    </style>
 </head>
 <body>
-
+<div>
+    我的名字是安迪，楚乔的男朋友
+</div>
 </body>
 </html>
