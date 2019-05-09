@@ -185,11 +185,29 @@
 
 ## Vue指令之`v-model`和`双向数据绑定`
 
+1.HTML 代码结构
 
+```
+<div id="app">
+    <h4>{{ msg }}</h4>
+    <!-- v-bind 只能实现数据的单向绑定，从M自动绑定到V，无法实现数据的双向绑定-->
+    <!--<input type="text" v-bind:value="msg" style="width: 100%;">-->
+    <input type="text" v-model="msg" style="width: 100%;">
+</div>
+```
 
+2.Vue实例代码：
 
-
-
+```
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '大家都是好学生，爱敲代码，爱学习，爱思考，简直是完美，没瑕疵！'
+        }
+    })
+</script>
+```
 
 ## 简易计算器案例
 
