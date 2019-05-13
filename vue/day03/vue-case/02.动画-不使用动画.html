@@ -7,13 +7,14 @@
 </head>
 <body>
 <div id="app">
-
+    <input type="button" value="toggle" @click="flag=!flag">
+    <h3 v-if="flag">这是一个H3</h3>
 </div>
 <script>
     var vm = new Vue({
         el: '#app',
         data: {
-
+            flag:true
         },
         methods:{
 
