@@ -111,6 +111,21 @@
         }
     });
 
+    Vue.directive("color",{
+        bind: function(el, binding) {
+            // 样式，只要通过指令绑定给了元素，不管这个元素有没有被插入到页面中去，这个元素肯定有了一个内联的样式
+            // 将来元素肯定会显示到页面中，这时候，浏览器的渲染引擎必然会解析样式，应用给这个元素
+            // el.style.color = 'red'
+            // console.log(binding.name)
+            // 和样式相关的操作，一般都可以在 bind 执行
+
+            console.log(binding.value)
+            console.log(binding.expression)
+
+            el.style.color = binding.value
+        }
+    })
+
     var vm = new Vue({
         el: '#app',
         data: {
@@ -205,6 +220,17 @@
                     return `${y}-${m}-${d} ${hh}:${mm}:${ss} ~~~~~~~`
                 }
             }
+        },
+        directives:{//设置字体属性
+            'fontweight': {//设置字体属性
+                bind:function (el,binding) {
+                    el.style.fontWeight = binding.value;
+                }
+            },
+            'fontsize': function (el, binding) { // 注意：这个 function 等同于 把 代码写到了 bind 和 update 中去
+                el.style.fontSize = parseInt(binding.value) + 'px'
+            }
+
         }
     })
 
