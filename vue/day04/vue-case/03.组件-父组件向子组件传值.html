@@ -28,12 +28,19 @@
                       content: 'qqq'
                   }
                 },
-                template: '<h1>这是子组件 --- {{parentmsg}}</h1>',
+                template: '<h1 @click="change">这是子组件 --- {{parentmsg}}</h1>',
                 //注意：组建中的所有props中的数据，都是通过父组件传递给子组件的
+                // props 中的数据，都是只读的，无法重新赋值
                 props: ['parentmsg'],//把父组件传递过来的parentmsg属性，现在props数组中，定义一下，这样，才能使用这个数据
                 directives: {},
                 filters: {},
-                components: {}
+                components: {},
+                methods:{
+                    change(){
+                        //可以被修改，但是会报错，不建议对此数据进行修改
+                        this.parentmsg = '被修改了'
+                    }
+                }
             }
         }
     });
