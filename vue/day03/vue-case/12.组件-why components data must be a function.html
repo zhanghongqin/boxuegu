@@ -6,10 +6,35 @@
     <script src="./lib/vue-2.4.0.js"></script>
 </head>
 <body>
-<div id="app">
-
-</div>
+    <div id="app">
+        <counter></counter>
+        <hr>
+        <counter></counter>
+        <hr>
+        <counter></counter>
+    </div>
+    <template id="tmpl">
+        <div>
+            <input type="button" value="+1" @click="increment">
+            <h3>{{count}}</h3>
+        </div>
+    </template>
 <script>
+    var dataObj = { count: 0 }
+    Vue.component('counter',{
+        template: '#tmpl',
+        data: function () {
+            // return dataObj;
+            return {
+                count: 0
+            }
+        },
+        methods:{
+            increment(){
+                this.count++;
+            }
+        }
+    })
     var vm = new Vue({
         el: '#app',
         data: {

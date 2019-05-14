@@ -7,13 +7,21 @@
 </head>
 <body>
 <div id="app">
-
+    <a href="#" @click.prevent="flag=true">登录</a>
+    <a href="#" @click.prevent="flag=false">注册</a>
+    <component :is="comName"></component>
 </div>
 <script>
+    Vue.component('login',{
+        template: '<h3>登录组件</h3>'
+    })
+    Vue.component('register',{
+        template: '<h3>注册组件</h3>'
+    })
     var vm = new Vue({
         el: '#app',
         data: {
-
+            comName: login // 当前 component 中的 :is 绑定的组件的名称
         },
         methods:{
 
