@@ -5,7 +5,7 @@
 组件化和模块化的不同：
  + 模块化： 是从代码逻辑的角度进行划分的；方便代码分层开发，保证每个功能模块的职能单一；
  + 组件化： 是从UI界面的角度进行划分的；前端的组件化，方便UI组件的重用；
-### 全局组件定义的三种方式
+### 全局组件定义的四种方式
 1. 使用 Vue.extend 配合 Vue.component 方法：
 ```
 var login = Vue.extend({
@@ -19,7 +19,40 @@ Vue.component('register', {
       template: '<h1>注册</h1>'
     });
 ```
-3. 将模板字符串，定义到script标签种：
+3. 使用template标签
+
+   html代码
+
+   ```
+   <div id="app">
+       <mycom3></mycom3>
+   </div>
+   <template id="tmpl">
+       <div>
+           <h1>这是通过 template 元素,在外部定义的组件结构,这个方式,有代码的只能提示和高亮</h1>
+           <h4>好用,不错!</h4>
+       </div>
+   </template>
+   ```
+
+   javascript代码
+
+   ```
+   Vue.component('mycom3',{
+       template:'#tmpl'
+   })
+   var vm = new Vue({
+       el: '#app',
+       data: {
+   
+       },
+       methods:{
+   
+       }
+   });
+   ```
+
+4. 将模板字符串，定义到script标签种：
 ```
 <script id="tmpl" type="x-template">
       <div><a href="#">登录</a> | <a href="#">注册</a></div>
@@ -31,6 +64,10 @@ Vue.component('account', {
       template: '#tmpl'
     });
 ```
+
+
+
+
 
 > 注意： 组件中的DOM结构，有且只能有唯一的根元素（Root Element）来进行包裹！
 

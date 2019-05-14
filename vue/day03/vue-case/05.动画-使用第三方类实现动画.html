@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="./lib/vue-2.4.0.js"></script>
-    <style>
-        .ball {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="./lib/animate.css">
+    <!-- 入场 bounceIn    离场 bounceOut -->
 </head>
 <body>
 <div id="app">
-    <input type="button" value="快到碗里来" @click="flag=!flag">
-<div class="ball" v-show="flag"></div>
+    <input type="button" value="toggle" @click="flag=!flag">
+    <!-- 需求： 点击按钮，让 h3 显示，再点击，让 h3 隐藏 -->
+    <!--<transition enter-active-class="animated bounceIn" leave-active-class="animated bounceOut">
+        <h3 v-if="flag">这是一个H3</h3>
+    </transition>-->
+    <!-- 使用 :duration="毫秒值" 来统一设置 入场 和 离场 时候的动画时长 -->
+   <!-- <transition enter-active-class="bounceIn" leave-active-class="bounceOut" :duration="5000">
+      <h3 v-if="flag" class="animated">这是一个H3</h3>
+    </transition>-->
+
+    <!-- 使用  :duration="{ enter: 200, leave: 400 }"  来分别设置 入场的时长 和 离场的时长  -->
+    <transition
+            enter-active-class="bounceIn"
+            leave-active-class="bounceOut"
+            :duration="{ enter: 2000, leave: 400 }">
+        <h3 v-if="flag" class="animated">这是一个H3</h3>
+    </transition>
 </div>
 <script>
     var vm = new Vue({
