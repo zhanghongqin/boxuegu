@@ -67,6 +67,8 @@ Vue.component('account', {
 
 
 
+### 私有组件
+
 
 
 > 注意： 组件中的DOM结构，有且只能有唯一的根元素（Root Element）来进行包裹！
